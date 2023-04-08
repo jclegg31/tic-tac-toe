@@ -9,8 +9,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lekton:wght@400;700&family=Montserrat&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a3f11998f4.js" crossorigin="anonymous"></script>
     <title>Vanilla JS Tic-tac-toe</title>
 </head>
@@ -49,24 +48,42 @@
             <div class="square shadow"></div>
 
             <!-- Scoreboard -->
-            <div class="score"></div>
-            <div class="score"></div>
-            <div class="score"></div>
+            <div class="score shadow" style="background-color: var(--turquoise);">
+                <p>Player 1</p>
+                <span>0 Wins</span>
+            </div>
+            <div class="score shadow" style="background-color: var(--light-gray);">
+                <p>Ties</p>
+                <span data-id="ties">0</span>
+            </div>
+            <div class="score" style="background-color: var(--yellow);"">
+                <p>Player 2</p>
+                <span>0 Wins</span>
+            </div>
         </div>
     </main>
 
     <footer>
         <p>
             Original project by
-            <a href="https://twitter.com/megfdev">@megfdev</a> and
-            <a href="https://twitter.com/Ivan00sto">@Ivan00Sto</a>
-        </p>
+            <a href=" https://twitter.com/megfdev">@megfdev</a> and
+                <a href="https://twitter.com/Ivan00sto">@Ivan00Sto</a>
+                </p>
 
-        <p class="zgdev">
-            Refactored by
-            <a href="https://twitter.com/zg_dev">@zg_dev</a>
-        </p>
-    </footer>
+                <p class="zgdev">
+                    Refactored by
+                    <a href="https://twitter.com/zg_dev">@zg_dev</a>
+                </p>
+                </footer>
+
+                <!-- Modal that opens when games ends -->
+                <div class="modal hidden">
+                    <div class="modal-contents">
+                        <p>Player 1 wins!</p>
+                        <button>Play again</button>
+                    </div>
+                </div>
+
 </body>
 
 </html>
